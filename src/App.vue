@@ -1,8 +1,11 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
+import CardList from "./components/CardList.vue";
+
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    CardList
   }
 
 }
@@ -10,6 +13,9 @@ export default {
 
 <template>
   <AppHeader title="Yu-Gi-Oh Api"/>
+  <main>
+    <CardList />
+  </main>
 
 </template>
 

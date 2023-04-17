@@ -1,6 +1,10 @@
 @import "bootstrap/scss/bootstrap";
 
-body {
-    background-color: black;
-    color: white;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    // debug
+    height: 600px;
 }

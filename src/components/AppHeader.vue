@@ -9,7 +9,7 @@ export default {
 
 <template>
     <header>
-        <img class="m-4" src="../assets/img/logo.png" alt="">
+        <img src="../assets/img/logo.png" alt="">
         <h1 class="container">{{ title }}</h1>
     </header>
 </template>
