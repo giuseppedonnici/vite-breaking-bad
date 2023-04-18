@@ -30,11 +30,13 @@ export default {
   },
   methods: {
     handleFilter() {
-      console.log("funziona");
       store.loading = true;
       const params = {};
       if(this.store.selectedArchetype) {
         params.archetype = this.store.selectedArchetype;
+      } else {
+        params.num = 20;
+        params.offset = 0;
       }
 
       axios.get(this.store.apiURL, {
@@ -47,7 +49,7 @@ export default {
         this.store.loading = false;
       })
 
-    }     
+    }
   }
 
 }
@@ -56,7 +58,7 @@ export default {
 <template>
   <AppHeader title="Yu-Gi-Oh Api"/>
   <main class="d-flex flex-column align-items-center p-5 g-4">
-    <AppSelect @filter="hadleFilter" />
+    <AppSelect @filter="handleFilter" />
     <CardList />
   </main>
 
