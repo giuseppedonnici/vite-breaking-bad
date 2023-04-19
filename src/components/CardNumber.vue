@@ -7,12 +7,17 @@ export default {
         return {
             store
         }
+    },
+    computed: {
+        cardNum() {
+            return store.cards.length;
+        }
     }
 }
 </script>
 
 <template>
-    <h6 class="p-3">{{ `Found ${store.cards.length} cards` }}</h6>
+    <h6 class="p-3">Found {{ cardNum }} cards</h6>
 
 </template>
 

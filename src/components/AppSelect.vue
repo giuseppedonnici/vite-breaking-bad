@@ -17,6 +17,6 @@ export default {
     <h3>Archtype:</h3>
     <select class="form-select w-25 mb-4" name="archetype" id="archetype" v-model="store.selectedArchetype" @change="$emit('filter')">
         <option value="">All</option>
-        <option :value="archetype" v-for="archetype in achetypes">{{ archetype }}</option>
+        <option :value="archetype" v-for="(archetype, index) in achetypes" :key="index">{{ archetype }}</option>
     </select>
 </template>
